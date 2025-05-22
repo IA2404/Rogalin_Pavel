@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Мой список задач</h1>
+
+    <form id="task-form" class="task-form">
+        <input type="text" id="task-input" placeholder="Добавить новую задачу..." required>
+        <button type="submit">Добавить</button>
+    </form>
+    <div id="task-input-error" class="error-message"></div>
+
+    <div class="controls">
+        <input type="text" id="search-input" placeholder="Поиск задач...">
+        <select id="filter-select">
+            <option value="all">Все</option>
+            <option value="active">Активные</option>
+            <option value="completed">Выполненные</option>
+        </select>
+    </div>
+
+    <ul id="task-list" class="task-list">
+    </ul>
+
+    <div id="no-tasks-message" class="no-tasks-message">
+        Пока нет задач. Добавьте первую!
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Редактировать задачу</h2>
+            <input type="text" id="edit-task-input">
+            <button id="save-edit-button">Сохранить</button>
+            <div id="edit-task-error" class="error-message"></div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
